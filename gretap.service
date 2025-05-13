@@ -1,0 +1,11 @@
+[Unit]
+Description=creates gretap tunnel on startup
+After=network.target
+
+[Service]
+ExecStart=/home/USER/gretap.sh
+Type=oneshot
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
